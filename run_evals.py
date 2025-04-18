@@ -22,6 +22,7 @@ def send_to_openai(message):
         model="gpt-4o",
         messages=[{"role": "user", "content": message}]
     )
+    print("response: " + completion.choices[0].message.content.strip())
     return completion.choices[0].message.content.strip()
 
 
